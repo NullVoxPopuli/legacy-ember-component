@@ -93,6 +93,10 @@
       "types": "./declarations/index.d.ts",
       "default": "./dist/index.js"
     },
+    "./helper": {
+      "types": "./declarations/helper.d.ts",
+      "default": "./dist/helper.js"
+    },
     "./addon-main.js": "./addon-main.cjs"
   },
   "typesVersions": {
