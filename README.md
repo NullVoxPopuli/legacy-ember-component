@@ -1,6 +1,11 @@
-# legacy-ember-component
+# @nullvoxpopuli/legacy-ember-component
 
-[Short description of the addon.]
+`@ember/component` extracted to a separate library, with babel plugin so that you don't have to change your code to migrate off `@ember/component` ot `@nullvoxpopuli/legacy-ember-component`. This library was created in preparation for deprecating most of the contents of `@ember/component` for progressing towards removing all the "classic" or "pre-octane" patterns from Ember.
+
+This library provides a babel plugin in case you have old libraries that are no longer maintained and happen to use `@ember/component`
+
+> [!NOTE]
+> This library itself is meant to be deprecation free, but only as far as the private APIs it relies in remain in ember.
 
 ## Compatibility
 
@@ -10,7 +15,7 @@
 ## Installation
 
 ```
-ember install legacy-ember-component
+npm add @nullvoxpopuli/legacy-ember-component
 ```
 
 ## Usage
