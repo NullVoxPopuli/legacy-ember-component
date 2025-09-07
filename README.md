@@ -7,6 +7,12 @@ This library provides a babel plugin in case you have old libraries that are no 
 > [!NOTE]
 > This library itself is meant to be deprecation free, but only as far as the private APIs it relies in remain in ember.
 
+This library has _copied_ all the supported behaviors directly from `ember-source @ 6.9.0-alpha.0`
+
+Only changes are:
+- adding extensions to relative imports for this library's build configuration -- relative imports are compiled away during build/publish.
+- some internal types removed because they reach out of their concerns (DynamicScope, RuntimeResolver, etc)
+
 ## Compatibility
 
 - Ember.js v4.12 or above
