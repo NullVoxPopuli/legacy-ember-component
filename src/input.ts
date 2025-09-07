@@ -1,18 +1,19 @@
 /**
 @module @ember/component
 */
+import { valueForRef } from '@glimmer/reference';
+import { untrack } from '@glimmer/validator';
 import { hasDOM } from '@ember/-internals/browser-environment';
 import { type Opaque } from '@ember/-internals/utility-types';
 import { assert, warn } from '@ember/debug';
 import { action } from '@ember/object';
-import { valueForRef } from '@glimmer/reference';
-import { untrack } from '@glimmer/validator';
-import { InputTemplate } from './templates.ts';
+
 import AbstractInput, { valueFrom } from './abstract-input.ts';
 import {
   type OpaqueInternalComponentConstructor,
   opaquify,
 } from './internal.ts';
+import { InputTemplate } from './templates.ts';
 
 let isValidInputType: (type: string) => boolean;
 
@@ -31,7 +32,7 @@ if (hasDOM) {
       try {
         INPUT_ELEMENT.type = type;
         isValid = INPUT_ELEMENT.type === type;
-      } catch (_e) {
+      } catch {
         isValid = false;
       } finally {
         INPUT_ELEMENT.type = 'text';
@@ -256,6 +257,7 @@ class _Input extends AbstractInput {
 
   @action checkedDidChange(event: Event): void {
     const element = event.target;
+
     assert(
       '[BUG] element must be an <input>',
       element instanceof HTMLInputElement,
@@ -280,6 +282,7 @@ class _Input extends AbstractInput {
 }
 
 const Input = opaquify(_Input, InputTemplate) as Input;
+
 interface Input
   extends Opaque<'component:input'>,
     OpaqueInternalComponentConstructor {}

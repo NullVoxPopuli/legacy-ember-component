@@ -20,7 +20,18 @@ npm add @nullvoxpopuli/legacy-ember-component
 
 ## Usage
 
-[Longer description of how to use the addon in apps.]
+
+Usage remains the same as `@ember/component`;
+```js
+import { Input, Textarea } from '@ember/component';
+import Helper, { helper } from '@ember/component/helper';
+```
+
+These imports will be transformed at build time to:
+```js
+import { Input, Textarea } from '@nullvoxpopuli/legacy-ember-component';
+import Helper, { helper } from '@nullvoxpopuli/legacy-ember-component/helper';
+```
 
 ## Contributing
 
@@ -29,3 +40,9 @@ See the [Contributing](CONTRIBUTING.md) guide for details.
 ## License
 
 This project is licensed under the [MIT License](LICENSE.md).
+
+## Other compat libraries
+
+- https://github.com/NullVoxPopuli/legacy-prototype-extensions
+- https://github.com/emberjs/ember-legacy-built-in-components
+

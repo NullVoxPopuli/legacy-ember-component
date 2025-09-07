@@ -49,6 +49,7 @@
     "@embroider/macros": "^1.18.0",
     "@embroider/vite": "^1.1.5",
     "@glimmer/component": "^2.0.0",
+    "@glimmer/interfaces": "^0.94.6",
     "@glimmer/manager": "^0.94.10",
     "@glimmer/reference": "^0.94.9",
     "@glimmer/validator": "^0.95.0",
