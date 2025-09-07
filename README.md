@@ -23,13 +23,13 @@ npm add @nullvoxpopuli/legacy-ember-component
 
 Usage remains the same as `@ember/component`;
 ```js
-import { Input, Textarea } from '@ember/component';
+import Component, { Input, Textarea } from '@ember/component';
 import Helper, { helper } from '@ember/component/helper';
 ```
 
 These imports will be transformed at build time to:
 ```js
-import { Input, Textarea } from '@nullvoxpopuli/legacy-ember-component';
+import Component, { Input, Textarea } from '@nullvoxpopuli/legacy-ember-component';
 import Helper, { helper } from '@nullvoxpopuli/legacy-ember-component/helper';
 ```
 
