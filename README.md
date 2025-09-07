@@ -1,3 +1,6 @@
+> [!WARNING]
+> This library is currently untested, as I explore the deprecation path for many of `@ember/components` exports in https://github.com/emberjs/ember.js/pull/20972
+
 # @nullvoxpopuli/legacy-ember-component
 
 `@ember/component` extracted to a separate library, with babel plugin so that you don't have to change your code to migrate off `@ember/component` ot `@nullvoxpopuli/legacy-ember-component`. This library was created in preparation for deprecating most of the contents of `@ember/component` for progressing towards removing all the "classic" or "pre-octane" patterns from Ember.
