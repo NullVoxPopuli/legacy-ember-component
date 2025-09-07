@@ -1,5 +1,5 @@
 > [!WARNING]
-> This library is currently untested, as I explore the deprecation path for many of `@ember/components` exports in https://github.com/emberjs/ember.js/pull/20972
+> This library is currently untested and unpublished, as I explore the deprecation path for many of `@ember/components` exports in https://github.com/emberjs/ember.js/pull/20972
 
 # @nullvoxpopuli/legacy-ember-component
 
